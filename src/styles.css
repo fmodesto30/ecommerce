@@ -1,0 +1,196 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #121212;
+  color: #fff;
+}
+
+.mainContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #121212;
+  color: #fff;
+}
+
+
+.price {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #9b9a99;
+}
+
+.title {
+  font-size: 48px;
+  margin-top: 30px;
+  animation: flipTitle 2s;
+}
+
+.containerInput {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin: 34px 0;
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.containerInput input {
+  background-color: transparent;
+  border: 0;
+  font-size: 20px;
+  color: #fff;
+  outline: none;
+  margin-right: 8px;
+}
+
+.containerInput input::placeholder {
+  color: #504f4f;
+}
+
+.buttonSearch {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.buttonSearch:hover {
+  transform: scale(1.2);
+}
+
+.sectionTitle {
+  text-align: center;
+}
+
+.loading {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.productSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.productSection .container {
+  width: 80%;
+}
+
+.productSection .main {
+  width: 100%;
+}
+
+.error {
+  margin-top: 20px;
+  font-size: 20px;
+  color: red;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #323b4f;
+  width: 80%;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+}
+
+.productTitle {
+  margin: 16px 0;
+  font-size: 20px;
+}
+
+.collapseButton {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-left: 8px;
+}
+
+.rotateIcon {
+  transform: rotate(180deg);
+}
+
+.feedbackContainer {
+  margin-top: 20px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.feedback {
+  background-color: #2b3448;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 12px;
+}
+
+.customerName {
+  color: #fff;
+  font-weight: bold;
+}
+
+.feedbackText {
+  color: #c4c4c4;
+}
+
+.feedbackDateAndReview {
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.description {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.feedbackRating {
+  float: right;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 972px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .productTitle {
+    font-size: 20px;
+  }
+
+  .main {
+    width: 80%;
+    justify-content: flex-start;
+  }
+
+  .productTitle {
+    margin: 16px 0;
+    font-size: 14px;
+  }
+}
