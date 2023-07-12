@@ -34,6 +34,12 @@ function App() {
         ...product,
         reviewEntity: product.reviewEntity,
       }));
+
+      if (productsWithReviews.length === 0) {
+        setError('No feedback found for this product');
+        return;
+      }
+
       setProducts(productsWithReviews);
 
       setInput('');
@@ -123,7 +129,7 @@ function App() {
                   </button>
                 </div>
                 <div>
-                <p className="price">{products[0].price}</p><br></br>
+                  <p className="price">{products[0].price}</p><br></br>
                   <p className="description align-left">
                     {products[0].description.split(' | ').map((item, index) => (
                       <span key={index}>
@@ -173,7 +179,9 @@ function App() {
                   >
                     <FiChevronDown
                       size={16}
-                      className={lastExpandedIndex === index ? 'rotateIcon' : ''}
+                      className={
+                        lastExpandedIndex === index ? 'rotateIcon' : ''
+                      }
                     />
                   </button>
                 </div>
@@ -187,12 +195,14 @@ function App() {
                     ))}
                   </p>
                 </div>
-                {lastExpandedIndex === index && product.reviews && (
+                {lastExpandedIndex === index && (
                   <div className="feedbackContainer">
-                    {product.reviews.map((review, reviewIndex) => (
+                    {product.reviewEntity.map((review, reviewIndex) => (
                       <div className="feedback" key={reviewIndex}>
                         <span className="customerName">{review.customerName}</span>
-                        <span className="feedbackText">: {review.feedBack}</span>
+                        <span className="feedbackText">
+                          : {review.feedBack}
+                        </span>
                         <br />
                         <span className="feedbackDateAndReview">
                           {review.feedBackDate}
@@ -205,7 +215,7 @@ function App() {
               </main>
             ))
           ) : (
-            <div>No recently searched products</div>
+            <div className="loading">Loading...</div>
           )}
         </div>
       </section>
