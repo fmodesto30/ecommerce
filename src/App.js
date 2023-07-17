@@ -195,9 +195,9 @@ function App() {
                     ))}
                   </p>
                 </div>
-                {lastExpandedIndex === index && (
+                {lastExpandedIndex === index && product.reviews && (
                   <div className="feedbackContainer">
-                    {product.reviewEntity.map((review, reviewIndex) => (
+                    {product.reviews.map((review, reviewIndex) => (
                       <div className="feedback" key={reviewIndex}>
                         <span className="customerName">{review.customerName}</span>
                         <span className="feedbackText">
