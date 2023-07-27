@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   font-family: Nunito, sans-serif;
 }
 
@@ -166,6 +168,10 @@ body, html {
   cursor: pointer;
 }
 
+.username {
+  margin-right: 15px;
+}
+
 .text-center {
   display: flex;
   justify-content: center;
@@ -187,6 +193,16 @@ body, html {
   text-decoration: none;
 }
 
+.link-like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #6a7dfe;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -195,6 +211,15 @@ body, html {
   flex-direction: column;
   background: #121212;
   color: #fff;
+}
+
+.containerCreateAccount {
+  min-height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
 }
 
 .mainContainer {
@@ -280,9 +305,16 @@ body, html {
 }
 
 .error {
-  margin-top: 50px;
-  font-size: 15px;
+  float: none;
+  font-size: 20px;
   color: red;
+  text-align: center;
+}
+
+.success {
+  float: none;
+  font-size: 20px;
+  color: green;
   text-align: center;
 }
 
@@ -362,6 +394,76 @@ body, html {
   font-size: 12px;
   color: #fff;
   font-weight: bold;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #000;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  position: relative;
+}
+
+.userContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #121212;
+  z-index: 1000;
+}
+
+.userGreeting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 12px;
+}
+
+.welcomeText {
+  font-size: 14px;
+  color: #fff;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0F62A6; 
+  align-self: center;
+}
+
+.logoutButton {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #244c6c; 
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background-color: #c0392b;
 }
 
 @media (max-width: 972px) {
